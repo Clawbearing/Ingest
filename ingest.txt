@@ -1,0 +1,123 @@
+Route Summarization
+EIGRP works well with minimal optimization. Scalability of an EIGRP autonomous system
+depends on route summarization. As the size of an EIGRP autonomous system increases,
+convergence may take longer. Scaling an EIGRP topology depends on summarizing routes in
+a hierarchical fashion. In addition to shrinking the routing table of all the
+routers, route summarization creates a query boundary and shrinks the query domain when a
+route goes active during convergence, thereby reducing SIA scenarios.
+
+Interface-Specific Summarization
+EIGRP summarizes network prefixes on an interface-by-interface basis. A summary
+aggregate is configured for the EIGRP interface. Prefixes within the summary aggregate are
+suppressed, and the summary aggregate prefix is advertised in lieu of the original prefixes.
+The summary aggregate prefix is not advertised until a prefix matches it. Interface-specific
+summarization can be performed in any portion of the network topology.
+
+The advertisement of summary routes occurs on an interface-by-interface basis. For classic
+EIGRP configuration mode, you use the interface parameter command ip summary-address
+eigrp as-number network subnet-mask [leak-map route-map-name] to place an EIGRP
+summary aggregate on an interface. You perform summary route configuration for named
+mode under af-interface interface-id, using the command summary-address network
+subnet-mask [leak-map route-map-name].
+The leak-map option allows the advertisement of the routes identified in the route map.
+Because suppression is avoided, the routes are considered leaked because they are advertised
+along with the summary aggregate. This allows for the use of longest-match routing to influence
+traffic patterns while suppressing most of the prefixes.
+
+
+Summary Discard Routes
+EIGRP installs a discard route on the summarizing routers as a routing loop-prevention
+mechanism. A discard route is a route that matches the summary aggregate prefix with the
+destination Null0. This prevents routing loops where portions of the summarized network
+range do not have a more specific entry in the Routing Information Base (RIB) on the
+summarizing router. The AD for the Null0 route is 5 by default.
+
+Summarization Metrics
+The summarizing router uses the lowest metric of the component routes in the summary
+aggregate prefix. The path metric for the summary aggregate is based on the path attributes
+of the path with the lowest metric. EIGRP path attributes such as total delay and minimum
+bandwidth are inserted into the summary route so that downstream routers can calculate the
+correct path metric for the summarized prefix.
+
+Every time a matching component route for the summary aggregate is added or removed,
+EIGRP must verify that the summary route is still using the attributes from the path with the
+lowest metric. If it is not, a new summary aggregate is advertised with updated EIGRP attributes,
+and downstream routes must run the DUAL again. The summary aggregate hides the
+smaller prefixes from downstream routers, but downstream routers are still burdened with
+processing updates to the summary aggregate.
+The fluctuation in the path metric is resolved by statically setting the metric on the summary
+aggregate with the command summary-metric network {/prefix-length | subnet-mask}
+bandwidth delay reliability load MTU. Bandwidth is in kilobits per second (Kbps), delay is
+in 10-microsecond (μs) units, reliability and load are values between 1 and 255, and the maximum
+transmission unit (MTU) is the MTU for the interface.
+
+Automatic Summarization
+EIGRP supports automatic summarization, automatically summarizing network advertisements
+when they cross a classful network boundary
+
+Current releases of IOS XE disable EIGRP classful network automatic summarization by
+default. You enable automatic summarization by using the command auto-summary under
+the EIGRP process for classic configuration mode or by using the command topology base
+for named mode configurations. To disable automatic summarization, use the command no
+auto-summary.
+
+
+Some WAN topologies may require special consideration for
+bandwidth utilization, split horizon, or next-hop self.
+
+EIGRP Stub Router
+A proper network design provides redundancy where dictated by business requirements to
+ensure that a remote location always maintains network connectivity. To overcome single
+points of failure, you can add additional routers at each site, add redundant circuits (possibly
+with different service providers), use different routing protocols, or use virtual private network
+(VPN) tunnels across the Internet for backup transport.
+
+Proper network design considers traffic patterns during normal operations and throughout
+various failure scenarios to prevent suboptimal routing or routing loops.
+
+The EIGRP stub functionality prevents scenarios like this from happening and allows an
+EIGRP router to conserve router resources. An EIGRP stub router does not advertise routes that it learns from other EIGRP peers. By default, EIGRP stubs advertise only connected and
+summary routes, but they can be configured so that they only receive routes or advertise any
+combination of redistributed routes, connected routes, or summary routes.
+
+
+The EIGRP stub router announces itself as a stub within the EIGRP hello packet. Neighboring
+routers detect the stub field and update the EIGRP neighbor table to reflect the router’s stub
+status. If a route goes active, EIGRP does not send EIGRP queries to an EIGRP stub router.
+This provides faster convergence within an EIGRP autonomous system because it decreases
+the size of the query domain for that prefix.
+You configure a stub router by placing the command eigrp stub {connected | receive-only
+| redistributed | static | summary} under the EIGRP process for classic configuration and
+under the address family for named mode configuration. Example 3-11 demonstrates the
+stub configuration for EIGRP classic mode and named mode.
+
+The EIGRP stub site feature builds on EIGRP stub capabilities that allow a router to advertise
+itself as a stub to peers only on the specified WAN interfaces but allow it to exchange
+routes learned on LAN interfaces. EIGRP stub sites provide the following key benefits:
+■ EIGRP neighbors on WAN links do not send EIGRP queries to the remote site when a
+route becomes active.
+■ The EIGRP stub site feature allows downstream routers to receive and advertise network
+prefixes across the WAN.
+■ The EIGRP stub site feature prevents the EIGRP stub site route from being a transit
+site.
+
+
+The EIGRP stub site feature works by identifying the WAN interfaces and then setting an
+EIGRP stub site identifier. Routes received from a peer on the WAN interface are tagged
+with an EIGRP stub site identifier attribute. When EIGRP advertises network prefixes out
+a WAN-identified interface, it checks for an EIGRP stub site identifier. If one is found, the
+route is not advertised; if an EIGRP stub site identifier is not found, the route is advertised.
+
+
+The EIGRP stub site function is available only in EIGRP named mode configuration. The
+WAN interfaces are identified underneath the af-interface interface-id hierarchy and use the
+stub-site wan-interface command. The stub site function and identifier are enabled with
+the command eigrp stub-site as-number:identifier. The as-number:identifier must remain
+the same for all devices in a site. Upon associating an interface to the EIGRP stub site, the
+router resets the EIGRP neighbor for that interface.
+
+A major benefit to the EIGRP stub site feature is that the stub functionality can be passed
+to a branch site that has multiple edge routers. As long as each router is configured with the
+EIGRP stub site feature and maintains the same stub site identifier, the site does not become
+a transit routing site; however, it still allows for all the networks to be easily advertised to
+other routers in the EIGRP autonomous system.
