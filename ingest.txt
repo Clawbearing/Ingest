@@ -1,212 +1,149 @@
-In this Diablo 2 resurrected video, we're going to be talking about classes and how
-each of them play.
-The game features 7 different classes and if you're still trying to figure out what
-to play, then this video is for you.
-The first thing that you need to do when you start the game is decide which class you'll
-be playing.
-If you're a newcomer, I strongly recommend that you pick a class based on your liking
-and not based on a build guide.
-The reason for this is that most builds heavily rely on powerful items that you will likely
-not be able to get for at least the first 50 to 100 hours.
-This means you'll end up struggling as you progress through the game resulting in a
-frustrating experience.
-Instead, you should start playing a class that is appealing to you and learn about the game
-as you progress through the different acts and difficulties.
-This will give you a better grasp of the mechanics allowing you to define your own playstyle,
-at which point you'll be better suited to search for a build and to vote to it.
-Also remember that you'll get one free respect for completing the very first quest of the
-game, Den of Evil, so if you're not enjoying your experience, you might want to use this
-respect and try a different option or skill tree.
-With the right build, all classes become very strong during endgame, but each of them has
-a very unique playstyle.
-We'll be publishing individual videos and builds for each class near release, but I
-wanted to give you a basic overview of each of them in case you're still in the fence
-regarding which to choose.
-The source risk is one of the most popular classes of Diablo 2 because of her high damage
-output and relatively easy mechanics.
-She can use fire, ice, and lightning spells and has access to one of the best abilities
-in the game called Teleport, which allows you to quickly move through the map or escape
-from danger.
-She has a very low health pool which means that you'll need to keep away from enemies
-to stay alive.
-Another downside of the source risk is that she can struggle with some elemental immune
-enemies as you'll often devote to a single element type.
-The source risk skill tree is divided between three different elemental affinities, cold,
-fire, and lightning spells.
-Most spells of the cold spell tree will slow down your enemies or freeze them providing
-you much better control of the battlefield.
-The individual damage of most spells is not that impressive, but it is compensated for
-by their AoE, providing the ability to kill many enemies at the same time.
-The fire spell tree has very high damage to both groups and individual targets.
-While the destructive force of this tree is unparalleled, it relies on killing your enemies
-quickly as the only means of protecting yourself.
-Some fire spells leave fire patches on the ground that deal damage over time and are
-best used in closed spaces.
-Winding spells are unique as they have a huge gap between their min and max damage meaning
-that you might one-shot an enemy on the first strike or do almost no damage at all after
-several casts.
-This is often compensated for by investing in cast speed rather than damage as quickly
-spamming lightning spells will increase the chances of you casting a high damage version.
-Additionally, static field and teleport are two spells that can be found in this tree
-but are used by every source risk build because of their convenience.
-While playing the source risk rely on powerful spells to defeat your enemies from a safe
-location.
-Most of her spells deal very high damage on their own, which makes her less reliant on
-gear than all other classes.
-Using her teleport skill, the source risk can quickly reach your desired destination
-and longer to complete runs much faster than other characters during an early game.
-This is very important in game progression and the main reason why she is picked by newcomers
-and during ladder resets.
-Here are some examples of source risk builds.
-The Amazon uses projectile weapons to deal massive damage to enemies from a safe distance.
-She has an average health pool and her passive skills provide her with a chance to avoid
-damage both while running or attacking enemies.
-The Amazon skill tree is divided between bow and crossbow skills, passive and magical
-skills and javelin and spear skills.
-It's highly advisable to focus on either the bow and crossbow tree or the javelin and
-spear tree and then a side points into passive and magical skills as required.
-Most people offer bows when selecting the bow and crossbow skill tree because of their
-increased attack speed and overall better unique bows.
-This tree is very versatile and excels at dealing with multiple enemies at the same
-time providing you with many types of elemental attacks.
-While the passive and magic skill tree doesn't have a play style on its own, it greatly
-increases both your offensive and defensive capabilities by providing passive bonuses.
-On top of that, the Valkyrie skill unlocked at level 30 is a better version of the mercenary
-which you can freely cast on the battlefield.
-Most people who opt for the javelin and spear skill tree will opt to go for javelins instead
-of spears because of their insane damage output and the ability to attack from a distance
-when needed.
-Javelin and amazon deals some of the highest damage between all classes but their throw
-speed is low so you'll need to make each shot count.
-Additionally, the tree mostly focuses on lightning and poison attacks which limits your engagement
-options.
-While playing the amazon, you'll kite enemies by taking a couple of shots running away
-and then repeating this sequence.
-Here are a couple examples of possible amazon builds.
-Paladins use defensive and offensive auras to buff both themselves and allies on the
-battlefield.
-They are very tanky due to their holy shield ability and defensive auras, but without
-enough gear they can fall behind and damage compared to other classes.
-It's worth mentioning that this downside is only noticeable during early gameplay as
-fully equipped paladins are one of the highest DPS classes in the game.
-The paladin skill tree is divided into combat skills, defensive auras and offensive auras.
-Both defensive and offensive auras can only be equipped on the secondary skill slot so
-you'll need to swap between them and battle according to the situation.
-Defense skills are designed to deal damage to enemies.
-Most paladin builds are created around one particular combat skill and then supported
-by different auras.
-The only exception here is holy shield which is used by most builds and provides a buff
-to your shield greatly increasing your defensive capabilities.
-Defensive auras can greatly increase your survival chances by for example increasing
-your elemental resistances or defensive values.
-Some of them can also be used as utility auras increasing movement speed or the mana
-recovery rate of you or your group.
-Defensive auras increase your offensive capabilities by either buffing your party
-members, debuffing enemies or by dealing direct damage.
-The offensive auras that you use highly depend on the type of combat skill that you are currently
-using.
-While playing paladin you'll focus on either the blessed hammer skill tree or in melee combat
-for your build.
-Paladins are heavily reliant on their equipment to increase their damage but their survivability
-is very high thanks to your defensive auras.
-During early gameplay it might take you longer than other classes to clear each room but
-you'll become more powerful as you acquire more gear.
-Here are some examples of paladin builds.
-The necromancer can summon minions to fight alongside him against the forces of evil.
-He can use curses to debilitate enemies turning the tide of battle in his favor and has access
-to ranged spells to attack on his own.
-The necromancer skill tree is divided between summoning spells, poison and bone spells and
-curses.
-The summoning skill tree focuses on summoning allies that fight for you.
-These can be raised from corpses and the total amount that you can control at the same
-time will increase with each point assigned.
-Additionally you can increase their power by spending points in skeletal mastery.
-Gollums are also a different type of summon that you can only have one active of any type
-at the same time.
-The cursed skill tree allows you to aid your forces by throwing curses into your enemies.
-Curses are thrown into an area and apply massive debuffs such as reducing armor or dealing
-damaged enemies in the AOE.
-The poison and bone spell skill tree is mainly composed of direct spells to deal damage on
-your own.
-It's important to remember that you'll need corpses to create your army so you'll want
-to be strong enough to take out some enemies to start raising your army.
-While playing the necromancer you'll command an army of skeletons and monsters that perform
-the hack and slash for you.
-While your forces fight on the vanguard you'll curse your enemies to weaken them and explode
-their corpses to deal area damage.
-It's important to notice that playing as a necromancer might be frustrating at times,
-especially when you die, as you require some preparation.
-You'll need corpses to raise your army and killing enemies on your own might be difficult
-if you assigned all points into summoning skills.
-Here are a couple examples of necromancer builds.
-Barbarians are very tanky and fight enemies face to face.
-They have access to shouts which act as buffs that affect both themselves and party members,
-greatly increasing both defensive and offensive capabilities for long periods of time.
-Barbarians are the only class that can wield two weapons at the same time with the exception
-of the assassin using Kataras, and their combat masteries allow them to increase the
-affinity with every type of weapon, opening up the possibility to numerous and very distinct
-builds for both PvP and PvE.
-The barbarian skill tree is divided between combat skills, combat masteries and war cries.
-Combat skills are mainly active attack skills, similar to paladins most barbarian builds
-are created around a combat skill.
-Most combat skills are designed to deal damage to a single enemy so most barbarians rely
-on the whirlwind ability to attack multiple enemies at once.
-Combat masteries are all passive effects.
-There is a skill mastery for each type of weapon, greatly increasing their effectiveness.
-There are also some passive defensive skills that increase your defense and speed.
-War cries can be used to provide a buff to all members of the party for a long period
-of time.
-Multiple shouts can be active at the same time, allowing the barbarian to greatly increase
-everyone's defense and attack values.
-While playing the barbarian, you'll run across the battlefield dealing very high damage to
-individual targets.
-The barbarian is the most item-dependent class in the game, and for the same reason,
-it is also considered the hardest class to start with in the game.
-Here are some good examples of barbarian builds.
-Druids use the power of nature to fight against the forces of evil.
-They are sort of jack-of-all-trades combining the ability to summon companions, transform
-into beasts to fight up close, and use magical abilities to fight from a safe distance.
-While they have access to a wide range of abilities, you'll need to focus on a specific
-category to effectively pass through the end game.
-The druid skill tree is divided between elemental skills, shape-shifting skills, and summoning
-skills.
-The elemental skill tree is mostly consisted of spells that deal direct damage to enemies.
-Most of these spells can deal cold and fire damage, but some like tornado deal physical
-damage as well.
-Shape-shifting skills allow the druid to transform into either a werewolf or a werebear.
-Most abilities in this tree can only be used while the druid is transformed, so it's
-best to focus on a single transformation.
-Similar to the necromancer, the summoning skills a druid possesses allow them to summon
-allies to fight for him.
-Different summons can be active at the same time, and some of them provide passive abilities
-for all party members.
-When playing with the druid, your gameplay experience will greatly depend on the build
-you went for.
-Here are some examples of druid builds.
-These use martial arts and traps to defeat her enemies.
-Traps can be laid on the ground and will periodically attack enemies within range while
-martial arts allow her to perform very quick attacks.
-The assassin skill tree is divided between martial arts, traps, and shadow discipline
-skills.
-Martial arts skills are divided into charge up skills which accumulate effects and damage
-on each successful hit, and finishing moves which release those charges and effects allowing
-you to create a devastating combo.
-Sharp skills can be laid on the ground and will periodically attack enemies when they
-are in range.
-Most traps deal elemental damage, and their attack pattern is unique to each of them.
-The shadow discipline tree combines passive and active buffs to greatly enhance both
-your defensive and offensive capabilities.
-Additionally, the shadow summon can be of great help to distract enemies and to increase
-your spell spam.
-While martial arts sound great on paper, they do not perform that well on the battlefield,
-so you'll most likely end up using traps and shadow discipline skills to enhance yourself.
-There are two main types of traps being fire traps and lightning traps.
-Fire traps are better at dealing with groups of enemies because of their V-shaped pattern,
-while lightning traps deal higher damage in a straight line.
-Here are some examples of assassin builds.
-I hope this video has helped you select a class and just remember there is really no
-wrong choice here, and I encourage you to make multiple characters with many different
-classes so you can experience them all.
-Stay tuned for our build guides for Diablo 2 resurrected as we publish many different
-builds for this iconic game, and be sure to check out the Diablo 2 resurrected wiki
-if you need a reference for rune words, other information, or more build ideas.
+Welcome to another video from explainingcomputers.com.
+This time I'm going to talk about digital video formats.
+To do this I also need to explain digital video codecs and containers.
+So let's go and get started.
+Digital video files can have many different file extensions including MP4, MOV and MXF.
+However, the first thing to understand about digital video formats is that they're not
+defined by their file type.
+This makes digital video formats far more complex than for example image formats where
+you can be certain that a JPG file is an image in the JPEG format.
+Rather than being defined by a file type, a digital video format is a combination of
+a video codec and a container.
+codec stands for coder decoder and refers to the algorithm used to digitally encode
+a video.
+Meanwhile a container is a digital box or wrapper used to store video streams and related content
+in a single file.
+It is therefore digital video containers that can be identified by their file extension
+are not digital video formats.
+Today, the great many video codecs and containers are in use with common codecs including H.264,
+also known as AVC, H.265, also known as HEVC, H.262, also known as MPEG 2 part 2, and JPEG
+ProRes, DNxHD and DNxHR.
+Common containers include MP4, AVI, MOV, MXF, 3GP and 3G2 and MTS and 2TS and TS.
+There are many other digital video codecs and containers but the ones listed are those
+I'll explain in more detail later in this video.
+As you probably gathered, digital video is complex and can get somewhat confusing.
+So, to help us get our heads around the critical concept of a video format being a combination
+of a codec and a container, let's take a look at one of these, a mini DV tape which
+was for years a common means of storing digital video.
+However, a mini DV tape is a container and not a format as it can be used to store video
+in three different ways.
+Specifically, a mini DV tape like this one can store video encoded with a standard definition
+consumer DV codec with a professional standard definition codec called DVCam and with a
+high definition codec called HDV.
+This means that it's impossible to look at a DV tape like this and to know its format
+and precisely the same is true when it comes to digital video files where the file extension
+indicates the container but not the video's codec.
+Digital video just like a real-of-movie film is made up of a series of still frames.
+A codec or coder decoder digitally encodes these frames with the term codec used to
+refer to both the software or hardware that performs the encoding operation as well as
+the algorithm it applies.
+Because videos contain a great deal of information, most but not all codecs can press a video's
+frames to limit file size.
+Such compression can also be achieved in two ways known as intra-frame and inter-frame.
+Inter-frame compression compresses each frame individually.
+In contrast, inter-frame compression stores some complete frames as key frames but all
+frames in between as delta frames which only contain incremental changes.
+This allows inter-frame compression to produce smaller video files.
+However, intra-frame video is generally of a higher quality and is easier for a computer
+to edit as every frame is immediately accessible.
+So, if you are planning to edit your video, it's best to shoot it using an intra-frame
+codec if possible.
+One, intra-frame codecs include NJPEG, ProRes, DNxHD and DNxHR.
+As you may guess, NJPEG stands for Motion JPEG and stores each video frame or field as
+an individual JPEG image.
+ProRes is a family of intra-frame codecs created by Apple which is widely used in professional
+video acquisition and production.
+The different codecs in the ProRes family are named ProRes 422 proxy which has the lowest
+data rate and quality up to ProRes 4444XQ which has a very high data rate and produces
+very large files.
+DNxHD stands for Digital Nonlinear Extensible High Definition and is a family of intra-frame
+codecs created by Avid for professional video editing but now also used for acquisition.
+As you may guess, DNxHR is a higher resolution version of DNxHD supporting 4K video and above.
+In common with ProRes, DNxHD and DNxHR data rates and file sizes can get very large indeed.
+One of the most popular codecs in use today is H.264, also known as AVC or Advanced Video
+Coding.
+H.264 was defined by the Motion Picture Experts Group or MPEG in part 10 of their standard
+MPEG-4.
+Most of the time H.264 is an inter-frame codec that produces relatively small video files
+by storing keyframes and the incremental differences between them.
+However, the specification allows H.264 to be used as an intra-frame codec and some professional
+video formats take advantage of this, usually describing their codec as iframe H.264.
+A more recent and increasingly popular inter-frame codec is H.265, also known as HEVC or High
+Efficiency Video Coding.
+This was also defined by the Motion Picture Experts Group in part 2 of their standard MPEG-H
+and can produce video with the same quality as an inter-frame H.264 codec with roughly
+half a day to rate and file size.
+However, H.265 requires more computer power to encode and decode when H.264 and so is
+not as easy to edit.
+An earlier and still very important inter-frame codec is H.262, which was defined by the Motion
+Picture Experts Group in part 2 of their MPEG-2 standard.
+H.262 is not as efficient as H.264 or H.265, so produces much larger video files.
+However, it is still widely used for standard definition digital television broadcasts and
+DVDs.
+As noted earlier, a digital video format is a combination of a video codec and a container.
+A container is a digital box or wrapper which is used to store a video stream, as well as
+one or more accompanying audio streams and potentially other related content such as
+subtitles and metadata.
+Digital video containers include MP4, AVI and MOV.
+MP4 was defined by the Motion Picture Experts Group in their MPEG-4 part 14 specification.
+AVI was developed by Microsoft and stands for Audio Video Interleave and MOV was created
+by Apple and is short for Movie.
+All three of these containers can store video encoded with many different codecs with MP4
+and MOV currently having the widest range of both professional and consumer applications.
+All niche containers include MXF3GP and 3G2, as well as MTS, M2TS and TS.
+MXF stands for Material Exchange Format and is a container used in professional video
+production and distribution.
+Meanwhile, 3GP and 3G2 are containers developed by the third-generation partnership project
+for use on mobile phones.
+Finally, MTS, M2TS and TS were created for the AVCHD video format and Blu-ray Discs and
+stand for MPEG Transport Stream, MPEG-2 Transport Stream and Transport Stream respectively.
+The codecs and containers we've just looked at can be combined to create a wide variety
+of video formats, some of which are mainly used for recording and others for the delivery
+of final video files.
+To provide just a few examples, when it comes to acquisition, videos recorded in the still
+relatively popular consumer format AVCHD which stands for Advanced Video Coding High Definition
+use the H.264 codec and either an MTS or an M2TS container.
+The XAVC-I and XAVC-L formats used on many Sony cameras then store H.264 video in an
+MXF container, while the closely related XAVC-S format uses an H.264 codec and an MP4 container.
+Many Canon cameras shoot in a format called XAVC which again uses the H.264 codec and
+an MXF container.
+Often, especially in the consumer arena, video formats are not given a name.
+For example, most DSLRs do not declare a format but use an H.264 or H.265 codec with either
+an MP4 or MOV container.
+Similarly, video captured on cameras and recorders that use a ProRes codec is typically described
+as being in the ProRes format and stored in a MOV container whilst DNxHD and DNxHR
+codec videos are usually placed in either an MXF or MOV file.
+Video is shot on smartphones, also don't have a named format but are usually encoded
+with an H.264 or H.265 codec and stored in a 3GP, 3G2 or MP4 container on an Android
+device or in a Mav container on an iPhone.
+When it comes to the delivery of final digital video files, once again we often lack specific
+format names, although H.264 and H.265 codecs used with MP4 or MOV containers are the most
+common in the consumer space.
+And, if you were ever in doubt, render your final video using the H.264 codec and an MP4
+container as this is always a very safe bet as well as being the recommended upload format
+for YouTube.
+The professional delivery of final video files usually takes place in an MXF container using
+codecs that include ProRes, DNxHD and DNxHR.
+This said, an intra-frame Panasonic codec called ABCintra is also very common.
+Indeed, in October 2014, all UK broadcasters began using a format called AS11DPP for HD
+program delivery, which uses the ABCintra codec and an MXF container.
+Finally, most cinemas these days project from a format called Digital Cinema Package or DCP.
+This uses an MJPEC codec and an MXF container.
+So, the MJPEC codec is not as rare as you may have imagined.
+For the best part of a century, the most stable and widespread motion picture format was this
+35mm film.
+Now technically we could argue that even the role of 35mm film is a container and not
+of format because the frames on a roll of 35mm film can be optically stretched to accommodate
+different aspect ratios and this division format shot 35mm film horizontally and not
+vertically in order to get a bigger frame with higher resolution.
+But for the most part, for the best part of about 100 years, if you wanted to shoot high
+quality moving images with a good archive potential, you chose the 35mm film format.
+Today, digital video reigns supreme on line, on television and in the cinema.
+And as we've seen in this video, there are a wide range of codecs and containers available,
+which give us a bewildering array of digital video formats.
+And deciding which one to shoot in, to edit in, to deliver in and to archive in is a very tricky
+decision. But I hope at least in this video I've given you some useful information.
+But now, that's it from me and the role of 35mm film.
+If you've enjoyed what you've seen it, please press the like button.
+If you haven't subscribed, please subscribe.
+And I hope to talk to you again, very soon.
