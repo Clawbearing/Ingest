@@ -1,123 +1,212 @@
-Route Summarization
-EIGRP works well with minimal optimization. Scalability of an EIGRP autonomous system
-depends on route summarization. As the size of an EIGRP autonomous system increases,
-convergence may take longer. Scaling an EIGRP topology depends on summarizing routes in
-a hierarchical fashion. In addition to shrinking the routing table of all the
-routers, route summarization creates a query boundary and shrinks the query domain when a
-route goes active during convergence, thereby reducing SIA scenarios.
-
-Interface-Specific Summarization
-EIGRP summarizes network prefixes on an interface-by-interface basis. A summary
-aggregate is configured for the EIGRP interface. Prefixes within the summary aggregate are
-suppressed, and the summary aggregate prefix is advertised in lieu of the original prefixes.
-The summary aggregate prefix is not advertised until a prefix matches it. Interface-specific
-summarization can be performed in any portion of the network topology.
-
-The advertisement of summary routes occurs on an interface-by-interface basis. For classic
-EIGRP configuration mode, you use the interface parameter command ip summary-address
-eigrp as-number network subnet-mask [leak-map route-map-name] to place an EIGRP
-summary aggregate on an interface. You perform summary route configuration for named
-mode under af-interface interface-id, using the command summary-address network
-subnet-mask [leak-map route-map-name].
-The leak-map option allows the advertisement of the routes identified in the route map.
-Because suppression is avoided, the routes are considered leaked because they are advertised
-along with the summary aggregate. This allows for the use of longest-match routing to influence
-traffic patterns while suppressing most of the prefixes.
-
-
-Summary Discard Routes
-EIGRP installs a discard route on the summarizing routers as a routing loop-prevention
-mechanism. A discard route is a route that matches the summary aggregate prefix with the
-destination Null0. This prevents routing loops where portions of the summarized network
-range do not have a more specific entry in the Routing Information Base (RIB) on the
-summarizing router. The AD for the Null0 route is 5 by default.
-
-Summarization Metrics
-The summarizing router uses the lowest metric of the component routes in the summary
-aggregate prefix. The path metric for the summary aggregate is based on the path attributes
-of the path with the lowest metric. EIGRP path attributes such as total delay and minimum
-bandwidth are inserted into the summary route so that downstream routers can calculate the
-correct path metric for the summarized prefix.
-
-Every time a matching component route for the summary aggregate is added or removed,
-EIGRP must verify that the summary route is still using the attributes from the path with the
-lowest metric. If it is not, a new summary aggregate is advertised with updated EIGRP attributes,
-and downstream routes must run the DUAL again. The summary aggregate hides the
-smaller prefixes from downstream routers, but downstream routers are still burdened with
-processing updates to the summary aggregate.
-The fluctuation in the path metric is resolved by statically setting the metric on the summary
-aggregate with the command summary-metric network {/prefix-length | subnet-mask}
-bandwidth delay reliability load MTU. Bandwidth is in kilobits per second (Kbps), delay is
-in 10-microsecond (μs) units, reliability and load are values between 1 and 255, and the maximum
-transmission unit (MTU) is the MTU for the interface.
-
-Automatic Summarization
-EIGRP supports automatic summarization, automatically summarizing network advertisements
-when they cross a classful network boundary
-
-Current releases of IOS XE disable EIGRP classful network automatic summarization by
-default. You enable automatic summarization by using the command auto-summary under
-the EIGRP process for classic configuration mode or by using the command topology base
-for named mode configurations. To disable automatic summarization, use the command no
-auto-summary.
-
-
-Some WAN topologies may require special consideration for
-bandwidth utilization, split horizon, or next-hop self.
-
-EIGRP Stub Router
-A proper network design provides redundancy where dictated by business requirements to
-ensure that a remote location always maintains network connectivity. To overcome single
-points of failure, you can add additional routers at each site, add redundant circuits (possibly
-with different service providers), use different routing protocols, or use virtual private network
-(VPN) tunnels across the Internet for backup transport.
-
-Proper network design considers traffic patterns during normal operations and throughout
-various failure scenarios to prevent suboptimal routing or routing loops.
-
-The EIGRP stub functionality prevents scenarios like this from happening and allows an
-EIGRP router to conserve router resources. An EIGRP stub router does not advertise routes that it learns from other EIGRP peers. By default, EIGRP stubs advertise only connected and
-summary routes, but they can be configured so that they only receive routes or advertise any
-combination of redistributed routes, connected routes, or summary routes.
-
-
-The EIGRP stub router announces itself as a stub within the EIGRP hello packet. Neighboring
-routers detect the stub field and update the EIGRP neighbor table to reflect the router’s stub
-status. If a route goes active, EIGRP does not send EIGRP queries to an EIGRP stub router.
-This provides faster convergence within an EIGRP autonomous system because it decreases
-the size of the query domain for that prefix.
-You configure a stub router by placing the command eigrp stub {connected | receive-only
-| redistributed | static | summary} under the EIGRP process for classic configuration and
-under the address family for named mode configuration. Example 3-11 demonstrates the
-stub configuration for EIGRP classic mode and named mode.
-
-The EIGRP stub site feature builds on EIGRP stub capabilities that allow a router to advertise
-itself as a stub to peers only on the specified WAN interfaces but allow it to exchange
-routes learned on LAN interfaces. EIGRP stub sites provide the following key benefits:
-■ EIGRP neighbors on WAN links do not send EIGRP queries to the remote site when a
-route becomes active.
-■ The EIGRP stub site feature allows downstream routers to receive and advertise network
-prefixes across the WAN.
-■ The EIGRP stub site feature prevents the EIGRP stub site route from being a transit
-site.
-
-
-The EIGRP stub site feature works by identifying the WAN interfaces and then setting an
-EIGRP stub site identifier. Routes received from a peer on the WAN interface are tagged
-with an EIGRP stub site identifier attribute. When EIGRP advertises network prefixes out
-a WAN-identified interface, it checks for an EIGRP stub site identifier. If one is found, the
-route is not advertised; if an EIGRP stub site identifier is not found, the route is advertised.
-
-
-The EIGRP stub site function is available only in EIGRP named mode configuration. The
-WAN interfaces are identified underneath the af-interface interface-id hierarchy and use the
-stub-site wan-interface command. The stub site function and identifier are enabled with
-the command eigrp stub-site as-number:identifier. The as-number:identifier must remain
-the same for all devices in a site. Upon associating an interface to the EIGRP stub site, the
-router resets the EIGRP neighbor for that interface.
-
-A major benefit to the EIGRP stub site feature is that the stub functionality can be passed
-to a branch site that has multiple edge routers. As long as each router is configured with the
-EIGRP stub site feature and maintains the same stub site identifier, the site does not become
-a transit routing site; however, it still allows for all the networks to be easily advertised to
-other routers in the EIGRP autonomous system.
+In this Diablo 2 resurrected video, we're going to be talking about classes and how
+each of them play.
+The game features 7 different classes and if you're still trying to figure out what
+to play, then this video is for you.
+The first thing that you need to do when you start the game is decide which class you'll
+be playing.
+If you're a newcomer, I strongly recommend that you pick a class based on your liking
+and not based on a build guide.
+The reason for this is that most builds heavily rely on powerful items that you will likely
+not be able to get for at least the first 50 to 100 hours.
+This means you'll end up struggling as you progress through the game resulting in a
+frustrating experience.
+Instead, you should start playing a class that is appealing to you and learn about the game
+as you progress through the different acts and difficulties.
+This will give you a better grasp of the mechanics allowing you to define your own playstyle,
+at which point you'll be better suited to search for a build and to vote to it.
+Also remember that you'll get one free respect for completing the very first quest of the
+game, Den of Evil, so if you're not enjoying your experience, you might want to use this
+respect and try a different option or skill tree.
+With the right build, all classes become very strong during endgame, but each of them has
+a very unique playstyle.
+We'll be publishing individual videos and builds for each class near release, but I
+wanted to give you a basic overview of each of them in case you're still in the fence
+regarding which to choose.
+The source risk is one of the most popular classes of Diablo 2 because of her high damage
+output and relatively easy mechanics.
+She can use fire, ice, and lightning spells and has access to one of the best abilities
+in the game called Teleport, which allows you to quickly move through the map or escape
+from danger.
+She has a very low health pool which means that you'll need to keep away from enemies
+to stay alive.
+Another downside of the source risk is that she can struggle with some elemental immune
+enemies as you'll often devote to a single element type.
+The source risk skill tree is divided between three different elemental affinities, cold,
+fire, and lightning spells.
+Most spells of the cold spell tree will slow down your enemies or freeze them providing
+you much better control of the battlefield.
+The individual damage of most spells is not that impressive, but it is compensated for
+by their AoE, providing the ability to kill many enemies at the same time.
+The fire spell tree has very high damage to both groups and individual targets.
+While the destructive force of this tree is unparalleled, it relies on killing your enemies
+quickly as the only means of protecting yourself.
+Some fire spells leave fire patches on the ground that deal damage over time and are
+best used in closed spaces.
+Winding spells are unique as they have a huge gap between their min and max damage meaning
+that you might one-shot an enemy on the first strike or do almost no damage at all after
+several casts.
+This is often compensated for by investing in cast speed rather than damage as quickly
+spamming lightning spells will increase the chances of you casting a high damage version.
+Additionally, static field and teleport are two spells that can be found in this tree
+but are used by every source risk build because of their convenience.
+While playing the source risk rely on powerful spells to defeat your enemies from a safe
+location.
+Most of her spells deal very high damage on their own, which makes her less reliant on
+gear than all other classes.
+Using her teleport skill, the source risk can quickly reach your desired destination
+and longer to complete runs much faster than other characters during an early game.
+This is very important in game progression and the main reason why she is picked by newcomers
+and during ladder resets.
+Here are some examples of source risk builds.
+The Amazon uses projectile weapons to deal massive damage to enemies from a safe distance.
+She has an average health pool and her passive skills provide her with a chance to avoid
+damage both while running or attacking enemies.
+The Amazon skill tree is divided between bow and crossbow skills, passive and magical
+skills and javelin and spear skills.
+It's highly advisable to focus on either the bow and crossbow tree or the javelin and
+spear tree and then a side points into passive and magical skills as required.
+Most people offer bows when selecting the bow and crossbow skill tree because of their
+increased attack speed and overall better unique bows.
+This tree is very versatile and excels at dealing with multiple enemies at the same
+time providing you with many types of elemental attacks.
+While the passive and magic skill tree doesn't have a play style on its own, it greatly
+increases both your offensive and defensive capabilities by providing passive bonuses.
+On top of that, the Valkyrie skill unlocked at level 30 is a better version of the mercenary
+which you can freely cast on the battlefield.
+Most people who opt for the javelin and spear skill tree will opt to go for javelins instead
+of spears because of their insane damage output and the ability to attack from a distance
+when needed.
+Javelin and amazon deals some of the highest damage between all classes but their throw
+speed is low so you'll need to make each shot count.
+Additionally, the tree mostly focuses on lightning and poison attacks which limits your engagement
+options.
+While playing the amazon, you'll kite enemies by taking a couple of shots running away
+and then repeating this sequence.
+Here are a couple examples of possible amazon builds.
+Paladins use defensive and offensive auras to buff both themselves and allies on the
+battlefield.
+They are very tanky due to their holy shield ability and defensive auras, but without
+enough gear they can fall behind and damage compared to other classes.
+It's worth mentioning that this downside is only noticeable during early gameplay as
+fully equipped paladins are one of the highest DPS classes in the game.
+The paladin skill tree is divided into combat skills, defensive auras and offensive auras.
+Both defensive and offensive auras can only be equipped on the secondary skill slot so
+you'll need to swap between them and battle according to the situation.
+Defense skills are designed to deal damage to enemies.
+Most paladin builds are created around one particular combat skill and then supported
+by different auras.
+The only exception here is holy shield which is used by most builds and provides a buff
+to your shield greatly increasing your defensive capabilities.
+Defensive auras can greatly increase your survival chances by for example increasing
+your elemental resistances or defensive values.
+Some of them can also be used as utility auras increasing movement speed or the mana
+recovery rate of you or your group.
+Defensive auras increase your offensive capabilities by either buffing your party
+members, debuffing enemies or by dealing direct damage.
+The offensive auras that you use highly depend on the type of combat skill that you are currently
+using.
+While playing paladin you'll focus on either the blessed hammer skill tree or in melee combat
+for your build.
+Paladins are heavily reliant on their equipment to increase their damage but their survivability
+is very high thanks to your defensive auras.
+During early gameplay it might take you longer than other classes to clear each room but
+you'll become more powerful as you acquire more gear.
+Here are some examples of paladin builds.
+The necromancer can summon minions to fight alongside him against the forces of evil.
+He can use curses to debilitate enemies turning the tide of battle in his favor and has access
+to ranged spells to attack on his own.
+The necromancer skill tree is divided between summoning spells, poison and bone spells and
+curses.
+The summoning skill tree focuses on summoning allies that fight for you.
+These can be raised from corpses and the total amount that you can control at the same
+time will increase with each point assigned.
+Additionally you can increase their power by spending points in skeletal mastery.
+Gollums are also a different type of summon that you can only have one active of any type
+at the same time.
+The cursed skill tree allows you to aid your forces by throwing curses into your enemies.
+Curses are thrown into an area and apply massive debuffs such as reducing armor or dealing
+damaged enemies in the AOE.
+The poison and bone spell skill tree is mainly composed of direct spells to deal damage on
+your own.
+It's important to remember that you'll need corpses to create your army so you'll want
+to be strong enough to take out some enemies to start raising your army.
+While playing the necromancer you'll command an army of skeletons and monsters that perform
+the hack and slash for you.
+While your forces fight on the vanguard you'll curse your enemies to weaken them and explode
+their corpses to deal area damage.
+It's important to notice that playing as a necromancer might be frustrating at times,
+especially when you die, as you require some preparation.
+You'll need corpses to raise your army and killing enemies on your own might be difficult
+if you assigned all points into summoning skills.
+Here are a couple examples of necromancer builds.
+Barbarians are very tanky and fight enemies face to face.
+They have access to shouts which act as buffs that affect both themselves and party members,
+greatly increasing both defensive and offensive capabilities for long periods of time.
+Barbarians are the only class that can wield two weapons at the same time with the exception
+of the assassin using Kataras, and their combat masteries allow them to increase the
+affinity with every type of weapon, opening up the possibility to numerous and very distinct
+builds for both PvP and PvE.
+The barbarian skill tree is divided between combat skills, combat masteries and war cries.
+Combat skills are mainly active attack skills, similar to paladins most barbarian builds
+are created around a combat skill.
+Most combat skills are designed to deal damage to a single enemy so most barbarians rely
+on the whirlwind ability to attack multiple enemies at once.
+Combat masteries are all passive effects.
+There is a skill mastery for each type of weapon, greatly increasing their effectiveness.
+There are also some passive defensive skills that increase your defense and speed.
+War cries can be used to provide a buff to all members of the party for a long period
+of time.
+Multiple shouts can be active at the same time, allowing the barbarian to greatly increase
+everyone's defense and attack values.
+While playing the barbarian, you'll run across the battlefield dealing very high damage to
+individual targets.
+The barbarian is the most item-dependent class in the game, and for the same reason,
+it is also considered the hardest class to start with in the game.
+Here are some good examples of barbarian builds.
+Druids use the power of nature to fight against the forces of evil.
+They are sort of jack-of-all-trades combining the ability to summon companions, transform
+into beasts to fight up close, and use magical abilities to fight from a safe distance.
+While they have access to a wide range of abilities, you'll need to focus on a specific
+category to effectively pass through the end game.
+The druid skill tree is divided between elemental skills, shape-shifting skills, and summoning
+skills.
+The elemental skill tree is mostly consisted of spells that deal direct damage to enemies.
+Most of these spells can deal cold and fire damage, but some like tornado deal physical
+damage as well.
+Shape-shifting skills allow the druid to transform into either a werewolf or a werebear.
+Most abilities in this tree can only be used while the druid is transformed, so it's
+best to focus on a single transformation.
+Similar to the necromancer, the summoning skills a druid possesses allow them to summon
+allies to fight for him.
+Different summons can be active at the same time, and some of them provide passive abilities
+for all party members.
+When playing with the druid, your gameplay experience will greatly depend on the build
+you went for.
+Here are some examples of druid builds.
+These use martial arts and traps to defeat her enemies.
+Traps can be laid on the ground and will periodically attack enemies within range while
+martial arts allow her to perform very quick attacks.
+The assassin skill tree is divided between martial arts, traps, and shadow discipline
+skills.
+Martial arts skills are divided into charge up skills which accumulate effects and damage
+on each successful hit, and finishing moves which release those charges and effects allowing
+you to create a devastating combo.
+Sharp skills can be laid on the ground and will periodically attack enemies when they
+are in range.
+Most traps deal elemental damage, and their attack pattern is unique to each of them.
+The shadow discipline tree combines passive and active buffs to greatly enhance both
+your defensive and offensive capabilities.
+Additionally, the shadow summon can be of great help to distract enemies and to increase
+your spell spam.
+While martial arts sound great on paper, they do not perform that well on the battlefield,
+so you'll most likely end up using traps and shadow discipline skills to enhance yourself.
+There are two main types of traps being fire traps and lightning traps.
+Fire traps are better at dealing with groups of enemies because of their V-shaped pattern,
+while lightning traps deal higher damage in a straight line.
+Here are some examples of assassin builds.
+I hope this video has helped you select a class and just remember there is really no
+wrong choice here, and I encourage you to make multiple characters with many different
+classes so you can experience them all.
+Stay tuned for our build guides for Diablo 2 resurrected as we publish many different
+builds for this iconic game, and be sure to check out the Diablo 2 resurrected wiki
+if you need a reference for rune words, other information, or more build ideas.
