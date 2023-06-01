@@ -1,133 +1,62 @@
-Hey gang, Chase here and today I want to have a quick discussion about codecs, a very complex
-subject.
-We're not going to be getting into any specific codecs today.
-Our goal will be to give you a basic understanding of how they work so you can assess them on
-your own.
-Let's get started.
-When you think about it, capturing, working with, and playing back digital videos asking
-quite a lot from any piece of technology, shooting the most basic video footage requires
-a camera sensor to capture the light available.
-Then turn that light into the highest quality digital information that it can, and save
-as much of that information as possible onto a storage device.
-And you'll eventually need a computer TV to reanalyze, reassemble, and play that information
-back at its highest quality possible, sometimes while it's streaming over the internet.
-codecs will make all of this possible.
-codec, which is a combination of the words compressor and decompressor, will compress
-the information of a video and audio signal into a more manageable file size or type when
-being saved, then help decompress that file the best way possible for viewing, transferring,
-saving, etc.
-Within a single project, you're likely to end up using several different codecs at different
-stages, the first of which is your capture codec.
-If your final video is just scratch, or you have a limited amount of storage space, you're
-going to want to have a codec that's a little more compressed, it's going to be a little
-bit lower quality, but generally speaking, when you're recording, you're going to want
-the least compressed codec that will save the most data and give you the highest quality
-image possible to work with.
-codecs utilize many different methods of compression during every step of the process.
-Right now we're going to focus on two key things that are very important for the record
-codec.
-The first is bit depth.
-Each pixel in your video has a value assigned to its red, green, and blue channels that
-will dictate how each of those colors mixes together to recreate the color that the camera
-sees.
-Bit depth determines the amount of different colors that your camera's codec has the ability
-to recognize and record.
-For example, cameras utilizing a 12-bit codec means that each RGB channel will utilize 12
-bits for a total of 36.
-What this translates to is that it's going to end up having 4,096 different colors available
-to choose from to recreate your image.
-Now saving so many different colors is going to require a considerable amount more extra
-storage space on your media.
-8-bit codecs are very common.
-Each RGB channel uses 8 bits of data, which translates to about 256 different possible
-color values per channel.
-You can still get great looking images from 8-bit.
-It's just going to take a little more effort.
-Smaller bit depths result in a degradation of the image and an increase in banding because
-there are fewer colors available to shift between them.
-Either way, your record codec will compress an image is through chroma subsampling.
-4-4-4 chroma sampling is the best option you can have.
-This means that in a group of 4 pixels, each pixel's individual color will be saved.
-No color information is lost so the image quality is better at the cost of more information
-taking up more space on your media.
-But some codecs subsample color.
-A 4-2-2 subsample rate means that in a group of 4 pixels, two of them will disregard their
-own color and take the color of the pixel they are next to in an effort to lose information
-and save space on your media.
-Another common subsample rate is 4-2-0.
-In the same group of 4 pixels, three will disregard their color and take on the color
-of the remaining one, but they'll save a lot of space for you in the end.
-Now that we know a little bit about capture codecs and how they decide what information
-to keep or dispose of, let's move on to edit codecs.
-Now you're ready to begin your edit.
-Here's where another form of compression that codecs use can really affect your edit
-process.
-And that's the difference between intreframe compression and intreframe compression.
-Intreframe compression, also known as spatial compression, gets its name because all compression
-is done within one single frame at a time.
-It does this by separating the individual frame into different sections, analyzing
-those sections for similarities that it can compress down, then saving the frame.
-Intreframe compression, also known as temporal compression, gets its name from calculating
-the current frame, then only saving the difference in each frame after that.
-Because intreframe compression is self-contained to each frame, your computer is only going
-to have to recall that single frame to play it back for you as you move around and manipulate
-your timeline.
-This is typically a better looking compression style anyways.
-But viewing frames of an intreframe compressed video file means that the computer must not
-only find and display that frame saved information.
-But it's going to have to go back through every frame before it to find the remaining
-saved information until the entire frame is built.
-And that's going to slow down your computer considerably.
-Sometimes video files can be so big that whether intra or intreframe compressed, a computer
-is still going to have trouble displaying all the information it has to in a timely
-fashion.
-A technique around this is to use a codec to compress the original captured footage into
-additional smaller, more manageable files that we call proxies.
-Because they are smaller and lower quality, proxy files are easier to move around and
-manipulate.
-And when you have a picture lock, simply reconnect the original high quality files for further
-correction or exporting or deliverable.
-Now your edit is finished and you're ready to create your final deliverable.
-The name of the game is to export the highest quality video possible without compromising
-its ability to playback smoothly.
-The codec you choose will inherently affect this outcome, but software like Final Cut
-Pro and Compressor or Adobe Premiere and Media Encoder give you a few options to help you
-fine tune a codec's settings to best fit your needs.
-One thing you'll have choice over is your average bit rate.
-This is the average amount of information per second that your codec will be allowed
-to use.
-The higher your average bit rate, the higher the quality and larger the size of your final
-video.
-As long as you have a media player and monitoring device capable of playing back that much information
-a second, a higher bit rate is your best option.
-But you will likely be putting this video onto the internet and larger files are more
-difficult to stream and play back.
-So you're going to want to lower that bit rate until you find the best quality image
-possible that's still easily playable through streaming.
-Here's a tip.
-If you're uploading to video hosting websites like YouTube and Vimeo, you should compress
-with a higher bit rate because they recompress every video you upload there anyway to make
-it more manageable and space efficient for them.
-In both Final Cut and Premiere based softwares, you have the option of a single pass or multi
-pass export.
-In a single pass export, your software will make a single pass over the video and compress
-it to the best of its ability, sticking close to the selected average bit rate throughout.
-A multi pass export, however, goes through the entire video file once, assesses it for
-spots, it can effectively allocate more bits for better quality when needed or more compression
-when it's able.
-Then, taking that into consideration, it goes back to the beginning and starts building
-the actual file.
-This means you're going to have a better looking image when you need it and more saved
-space when you need it.
-Lastly, the keyframe or keyframe distance option will be enabled for any interframe
-compression exporting.
-We discussed earlier that interframe is not ideal for editing, but it's fantastic for
-compressing a video for playback.
-The amount you set here determines how many frames you allow your video to interframe
-compress before scratching the original template and starting all over again.
-Well we hope you learned something from this basic rundown of codecs.
-As I mentioned before, this is a highly complex subject matter and it was our hope
-that now you have a basic understanding that's going to help you approach and research them
-a little easier.
-For more tips and tutorials, be sure to subscribe to the B&H YouTube channel.
-Thank you very much.
+Certifications
+MCSA Windows Server 2016
+Cisco Certified Specialist -Enterprise Core
+Cisco Certified Network Associate(CCNA)
+Microsoft Certified Professional
+Honors-Awards
+Most Outstanding Speaker
+Lamda Pi Eta CommunicationHonor's Society Member
+Publications
+Weekly Podcast
+Ethan Cowgill
+Network Engineer at Optiver
+Chicago, Illinois, United States
+Summary
+Associate Windows System Administrator with two years ofexperience in the field and an honor's graduate in Communication.Proficient in troubleshooting end-user problems in a large enterprisesetting, improving enterprise infrastructure, and keeping criticalsystems operating 24/7. Currently hold multiple certificationswith CompTIA and Microsoft for network and server technology -looking to take on the next challenge as a System Admin or NetworkEngineer.
+Experience
+Optiver
+Network Engineer
+July 2021 - Present (2 years)
+Chicago
+ Patch/upgrade network devices including Cisco switches, Palo Alto firewalls,and juniper products to meet latest security standards Set up network access with various trading exchanges by configuring BGPpeering and ACL permissions Diagram network topology to unify understanding of network issues withinenvironment and illustrate new network designs with Gliffy Create documentation to explain multicast and BGP troubleshooting withintrading environment Provide the means for Linux and Windows hosts to have end-to-end routinginside company network and to external networks Provision security access through Palo Alto firewalls and Juniper gatewaysto permit external network access Turn up new Cisco switches with appropriate device and BGP configurationsto support new trading hosts Communicate with trading exchanges to define networking info needed tobuild ACL and prefix-list mappings Execute python scripts and utilize NetMiko library to automate deviceconfigurations
+Page 1 of 4
+Sidley Austin LLP
+Enterprise Operations Analyst
+March 2020 - June 2021 (1 year 4 months)
+Chicago, Illinois, United States
+ Provide 24/7, 365 infrastructure support and applications management Render technical troubleshooting and escalation for complex network,server, and storage incidents Incident Manager for major incidents that require communications andescalation to management Employ ITIL best practices to complete tickets in Service Now Monitor and perform administrative tasks within VMware vSphere Perform patch validation and remediation for a large enterprise environment Track network utilization trends and resolve outage issues with SolarWindsOrion Perform change control requests for server decommissions SSH into Dell EMC storage devices and Cisco equipment to generate logsand perform maintenance jobs Escalate infrastructure issues to outside vendors such as a Verizon, Dell,and Cisco Develop knowledge base articles for routine team tasks
+Publicis Groupe
+Associate Windows System Administrator
+March 2019 - March 2020 (1 year 1 month)
+Chicago, Illinois
+• Utilize JIRA ticketing software to complete IT issues within defined SLAs• Create PowerShell scripts to automate solutions for known issues• Administer Active Directory and SCCM objects among multiple sites acrossthe country• Trace Office 365/Exchange messages to iron out email routing issues• Manage distribution and security groups inside of Microsoft Exchange• Support teleconferencing tools / Skype for Business software for corporatemeetings• Provision new equipment for users including Mac and Windows systems• Enforce mobile device management on end-user devices for email • Service remote users and resolve Cisco VPN connection issues• Contribute user-facing and internal documentation with Atlassian Confluence• Rack servers, ensure network reachability, and update documentation fordatacenter • Audit and complete purchasing requests for computer hardware equipment
+Page 2 of 4
+• Onboard new employees to IT processes and offboard terminated users• Decommission and rebuild servers inside of Hyper V• Complete weekly sprints following SCRUM methodology to track workflow
+Blessing Health
+Support Center Analyst
+June 2018 - February 2019 (9 months)
+Quincy, Illinois
+• Handle security permissions for over 5,000 Active Directory Users• Update and monitor PFM financial entry system• Monitor and correct Citrix server session issues• Educate end-users on security policies and how to use clinical software• Serve as outage communication coordinator during downtime periods• Initiate and document end-user issues to resolve hardware/software issues• Revise IT knowledge base articles to provide clear directions for teammates• Conduct projects with Desktop Support to overhaul infrastructure equipment
+Townsquare Media
+Production Intern
+September 2015 - June 2016 (10 months)
+Quincy, Illinois
+• Produced :15, :30, and :60 commercial spots with Adobe Audition• Input national spots and music into database to ensure proper air dates• Recorded voice tracks for radio station• Published original and syndicated content through WordPress• Scheduled daily Facebook posts
+Quincy University
+QUTV Director
+December 2014 - May 2016 (1 year 6 months)
+Quincy, Illinois
+• Direct weekly campus news update with tricaster• Monitor audio levels and create full-screen graphics• Direct floor personnel and communicate with talent in accordance with script• Film and edit sports highlights/stories with Adobe software
+Sinclair Broadcast Group
+Morning Production Assistant
+November 2014 - November 2015 (1 year 1 month)
+Quincy, Illinois
+• Proudced “Hollywood” and “Consumer” news blocks
+Page 3 of 4
+• Re-wrote national stories to energize them for television• Edited AP Wire video for television• Assisted in floor production through directing on-air talent• Operated teleprompter throughout 2-hour broadcast• Greeted guests to ensure they were comfortable and prepared to be ontelevision
+Education
+Quincy University
+Bachelor's degree, Communication, General · (2014 - 2016)
+John Wood Community College
+Associate's degree, Communications · (2011 - 2013)
+Page 4 of 4
